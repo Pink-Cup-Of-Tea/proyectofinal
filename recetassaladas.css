@@ -1,0 +1,80 @@
+body{
+    background-color: blanchedalmond;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+#receta .container{
+    text-align: center;
+    padding: 10px;
+}
+
+#receta .container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#receta .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#receta h2{
+    margin-top: 0px;
+}
+
+#receta .img-container{
+    background-image: url(./media/GASTRONOMIA.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 600px; 
+}
+
+hr.new1 {
+    border-top: 5px solid rgb(207, 232, 255);
+  }
+
+  
+
+#receta h2{
+    margin-top: 0px;
+}
+
+#receta .omurice{
+    background-image: url(./media/omurice.jpeg);
+    border-style: dashed;
+    border-color: rgb(207, 232, 255);
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 600px; 
+}
+
+#receta .onigiri{
+    background-image: url(./media/onigiri.jpeg);
+    border-style: dashed;
+    border-color: rgb(207, 232, 255);
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 600px; 
+}
+
+#receta .harumaki{
+    background-image: url(./media/harumaki.jpg);
+    border-style: dashed;
+    border-color: rgb(207, 232, 255);
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 600px; 
+}
