@@ -9,20 +9,20 @@ const app = express();
 const PORT = process.env.PORT;
 
 //Conexion a la Base de Datos
-const conexion = mysql.createConnection({
-  host: process.env.HOST,
-  user: process.env.USER,
-  password: process.env.PASSWORD,
-  database: process.env.DATABASE
-});
+// const conexion = mysql.createConnection({
+//   host: process.env.HOST,
+//   user: process.env.USER,
+//   password: process.env.PASSWORD,
+//   database: process.env.DATABASE
+// });
 
-conexion.connect((err) => {
-  if (err) {
-    console.error(`Error en la conexion: ${err.stack}`);
-  console.log(`Conectado a la Base de Datos ${process.env.DATABASE}`)
-  return;
-  }
-});
+// conexion.connect((err) => {
+//   if (err) {
+//     console.error(`Error en la conexion: ${err.stack}`);
+//   console.log(`Conectado a la Base de Datos ${process.env.DATABASE}`)
+//   return;
+//   }
+// });
 
 //conexion.connect();
 
@@ -68,32 +68,32 @@ app.get('/contactanos', (req, res) =>{
   })
 });
 
-app.post('/contactanos', (req, res) => {
+// app.post('/contactanos', (req, res) => {
 
-  let comentario = req.body.comentario;
+//   let comentario = req.body.comentario;
 
-  if (comentario == '') {
-      let validacion = 'Rellene los campos correctamente..';
-      res.render('contactanos', {
-          validacion
-      });
-  } else {
+//   if (comentario == '') {
+//       let validacion = 'Rellene los campos correctamente..';
+//       res.render('contactanos', {
+//           validacion
+//       });
+//   } else {
 
-      let datos = {
-        comentario: comentario
-      };
+//       let datos = {
+//         comentario: comentario
+//       };
 
-      let sql = 'INSERT INTO seikadb.recetas SET ?';
+//       let sql = 'INSERT INTO seikadb.recetas SET ?';
 
-      conexion.query(sql, datos, (err, result) => {
-          let envioDatos = 'Datos Enviados Con Éxito'
-          if (err) throw err;
-          res.render('contactanos', {
-              envioDatos
-          });
-      });
-  }
-});
+//       conexion.query(sql, datos, (err, result) => {
+//           let envioDatos = 'Datos Enviados Con Éxito'
+//           if (err) throw err;
+//           res.render('contactanos', {
+//               envioDatos
+//           });
+//       });
+//   }
+// });
 
 app.listen(PORT, () => {
   console.log(`El servidor esta trabajando en el Puerto ${PORT}`);
