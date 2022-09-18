@@ -8,8 +8,6 @@ const async = require('hbs/lib/async');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-
-
 //Conexion a la Base de Datos
 const conexion = mysql.createConnection({
   host: process.env.HOST,
@@ -18,14 +16,20 @@ const conexion = mysql.createConnection({
   database: process.env.DATABASE
 })
 
-const conectar = async (
-  await conexion.connect((error) =>{
-    if(error) throw error;
-    console.log('Conexion a la Data Base exitosa');
-  })
-)
+conexion.connect((err) => {
+  if (err) {
+    console.error(`Error en la conexion: ${err.stack}`);
+  console.log(`Conectado a la Base de Datos ${process.env.DATABASE}`)
+  return;
+  }
+});
 
-conectar();
+//conexion.connect();
+
+//Configurar Middelwares
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+app.use(express.static(path.join(__dirname, 'public')))
 
 app.listen(PORT, () => {
   console.log('El servidor esta trabajando en el Puerto ${PORT}');
