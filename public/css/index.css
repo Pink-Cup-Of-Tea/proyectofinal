@@ -1,0 +1,190 @@
+body{
+    background-color: blanchedalmond;
+
+}
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+    
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 16.66%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+
+  .container{
+    max-width: 3000px;
+    margin: auto;
+}
+
+hr.new1 {
+  border-top: 5px solid rgb(207, 232, 255);
+}
+
+#receta-dulce .container{
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+#receta-dulce .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: initial;
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#receta-dulce h2{
+    margin-top: 0px;
+}
+
+#receta-dulce .cheesecake{
+    background-image: url(/media/cheesecake.jpeg);
+    border-style: dashed;
+    border-color: rgb(207, 232, 255);
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 600px; 
+}
+
+#receta-dulce .mochi{
+    background-image: url(/media/mochi.jpeg);
+    border-style: dashed;
+    border-color: rgb(207, 232, 255);
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 600px; 
+}
+
+#receta-dulce .taiyaki{
+    background-image: url(/media/taiyaki.jpeg);
+    border-style: dashed;
+    border-color: rgb(207, 232, 255);
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 600px; 
+}
+
+.container{
+  max-width: 1400px;
+  margin: auto;
+}
+
+#receta-salado .container{
+  text-align: center;
+  padding: 10px;
+}
+
+#receta-salado .container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#receta-salado .texto{
+  width: 50%;
+  max-width: 600px;
+  text-align: initial;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#receta-salado h2{
+  margin-top: 0px;
+} 
+
+#receta-salado .omurice{
+  background-image: url(/media/omurice.jpeg);
+  border-style: dashed;
+  border-color: rgb(207, 232, 255);
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  width: 600px; 
+}
+
+#receta-salado .onigiri{
+  background-image: url(/media/onigiri.jpeg);
+  border-style: dashed;
+  border-color: rgb(207, 232, 255);
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  width: 600px; 
+}
+
+#receta-salado .harumaki{
+  background-image: url(/media/harumaki.jpg);
+  border-style: dashed;
+  border-color: rgb(207, 232, 255);
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  width: 600px; 
+}
